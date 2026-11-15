@@ -33,9 +33,18 @@ Dokumen ini berfungsi sebagai buku catatan utama (*living document*) untuk merek
   * Terjalin komunikasi langsung dengan ketua dan pengurus/wasit di kedua chapter pasca-pertemuan di turnamen resmi.
   * **Justifikasi Akademis Bab 1:** Membuktikan adanya fenomena **mobilitas atlet lintas wilayah**, di mana atlet membutuhkan sistem pemeringkatan (ELO Rating) terpusat yang adil dan dapat diakses dari mana saja saat bertanding di luar kota asalnya.
 * **Masalah Lapangan (Problem Statement):**
-  1. Sesi latihan rutin/sparring bersifat bebas dan belum terdokumentasi secara sistematis.
-  2. Pertandingan resmi (*Supermatch*) telah dipimpin oleh wasit (senior puller), namun pencatatan skor, riwayat tanding, foul, dan evaluasi performa masih manual/ingatan.
+  1. Sparring merupakan latihan tanding rutin yang biasanya dilakukan dua kali seminggu dan perlu dibedakan dari supermatch. Hasil menang-kalah sparring tidak mencerminkan kekuatan atlet karena peserta dapat sedang mencoba atau mempelajari teknik.
+  2. Supermatch dipimpin oleh wasit, yaitu anggota ISPF yang pernah menjadi wasit resmi atau anggota senior yang memahami aturan. Pencatatan skor, riwayat tanding, foul, dan evaluasi performa masih manual/ingatan.
   3. Belum ada sistem klasemen (*leaderboard*) resmi berbasis data untuk mengukur performa atlet secara objektif per kelas tanding dan tangan (kiri/kanan).
+
+#### Pembedaan Sparring dan Supermatch (Klarifikasi Peneliti, 2026-11-16)
+
+* **Sparring:** latihan tanding panco yang dilakukan rutin, sekitar dua kali seminggu; bukan latihan angkat beban. Pada sesi sparring, peserta bebas memilih lawan tanding.
+* **Tujuan sparring:** mempelajari teknik baru atau mencoba teknik yang telah dilatih dalam latihan mandiri. Karena tujuan dan intensitas tiap peserta dapat berbeda, kemenangan dalam sparring tidak otomatis berarti pemenangnya lebih kuat.
+* **Supermatch:** pertandingan yang dapat muncul karena seorang atlet menantang atlet lain untuk membuktikan kemampuan atau menguji batasnya; atlet juga dapat dipertemukan untuk menjalani supermatch. Supermatch memiliki wasit: anggota ISPF yang pernah menjadi wasit resmi atau anggota senior yang memahami aturan.
+* **Waktu pelaksanaan bukan pembeda:** supermatch dapat berlangsung dalam sesi latihan rutin dua kali seminggu maupun dalam event khusus supermatch. Jadi, supermatch yang berlangsung saat sesi rutin tetap merupakan supermatch, bukan sparring.
+* **Aturan input sistem (keputusan peneliti):** hasil supermatch hanya dapat dimasukkan ke sistem jika pertandingan tersebut diwasiti oleh admin yang sudah terdaftar sebagai wasit di sistem. Tidak semua supermatch yang terjadi di lapangan otomatis dapat dicatat di sistem.
+* **Implikasi rancangan sementara:** sistem perlu membedakan jenis aktivitas/pertandingan dari jadwal atau event tempat kegiatan berlangsung. Hasil sparring tidak digunakan sebagai dasar pemeringkatan Elo karena bukan ukuran kekuatan yang andal. Sumber hasil supermatch dalam sistem dibatasi oleh aturan wasit terdaftar di atas; tata cara pencatatan dan pengesahan hasil lainnya masih perlu dirinci bersama pengurus/wasit.
 
 ### 2.2 Keputusan Metode / Algoritma
 * **Metode Terpilih:** **Algoritma ELO Rating**
@@ -83,6 +92,13 @@ Berdasarkan `BUKU PANDUAN SKRIPSI 2025.pdf`:
 ## 4. Log Riwayat Diskusi (Changelog)
 
 Format pencatatan berkala untuk diskusi berikutnya:
+
+### [2026-11-16] - Klarifikasi Aktivitas Lapangan dan Arah Judul
+
+* **Klarifikasi dari peneliti:** sparring adalah latihan tanding panco, bukan latihan angkat beban, yang rutin dilakukan sekitar dua kali seminggu. Peserta bebas memilih lawan dan memakai sparring untuk mempelajari teknik baru atau mencoba teknik dari latihan mandiri. Hasil menang-kalah sparring tidak dapat langsung dipakai untuk menyimpulkan siapa lebih kuat. Supermatch dapat terjadi karena tantangan untuk membuktikan kemampuan atau menguji batas, atau karena atlet dipertemukan. Supermatch dapat diadakan pada sesi rutin maupun pada event khusus. Supermatch memiliki wasit, yaitu anggota ISPF yang pernah menjadi wasit resmi atau anggota senior yang memahami aturan.
+* **Aturan input sistem dari peneliti:** hanya hasil supermatch yang diwasiti oleh admin yang telah terdaftar sebagai wasit di sistem yang dapat dimasukkan ke sistem. Wasit supermatch di lapangan dan wasit yang memenuhi syarat input sistem tidak selalu sama.
+* **Keputusan saat ini:** peneliti lebih condong ke Opsi 1, yaitu rancang bangun sistem informasi manajemen supermatch dan pemeringkatan atlet dengan Elo. Opsi 3 (matchmaking) bukan fokus utama judul saat ini; kebutuhan fitur mempertemukan lawan supermatch dapat dikaji kemudian berdasarkan temuan lapangan.
+* **Catatan untuk perancangan:** jangan menyamakan sparring dengan supermatch, jangan menggunakan jadwal rutin vs event khusus sebagai penentu jenis pertandingan, jangan memasukkan hasil sparring ke rating Elo, dan batasi input hasil supermatch menurut status admin sekaligus wasit terdaftar di sistem.
 
 ### [2026-10-15] - Diskusi Arsitektur Platform & Penguatan Batasan Kasus
 * **Topik Dibahas:**
