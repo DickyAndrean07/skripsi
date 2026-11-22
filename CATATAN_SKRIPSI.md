@@ -16,6 +16,7 @@ Dokumen ini berfungsi sebagai buku catatan utama (*living document*) untuk merek
 * **Judul Terpilih:**
   > **"Rancang Bangun Sistem Informasi Manajemen Supermatch dan Pemeringkatan Atlet Panco Menggunakan Algoritma ELO Rating Berbasis Web"**  
   > *(Studi Kasus: Indonesia Strong Pullers Federation / ISPF Surabaya & Sidoarjo)*
+* **Cakupan penelitian yang ditegaskan pada 2026-11-16:** pengumpulan data dan uji coba skripsi difokuskan pada ISPF Surabaya dan Sidoarjo. Rancangan data dan hak akses disiapkan agar chapter lain dapat ditambahkan kelak, tetapi keikutsertaan ISPF Lamongan Utara/Selatan, Malang, Kediri, atau chapter lain bukan syarat keberhasilan skripsi dan belum diklaim sebagai lokasi uji coba.
 
 ---
 
@@ -25,8 +26,9 @@ Dokumen ini berfungsi sebagai buku catatan utama (*living document*) untuk merek
 * **Organisasi Resmi:** **Indonesia Strong Pullers Federation (ISPF)**
 * **Tautan Profil Resmi:** [Instagram ISPF @ispf.ipp](https://www.instagram.com/ispf.ipp/)
 * **Chapter / Wilayah yang Terlibat:**
-  * **Utama:** ISPF Surabaya & Sidoarjo (200+ anggota aktif).
-  * **Mitra Sparring & Afiliasi:** ISPF Lamongan (atlet aktif sparring/supermatch lintas wilayah).
+  * **Lokasi penelitian dan uji coba yang direncanakan:** ISPF Surabaya & Sidoarjo (perkiraan 200+ anggota aktif, perlu verifikasi).
+  * **Konteks relasi atlet lintas wilayah:** ISPF Lamongan (atlet aktif sparring/supermatch lintas wilayah); tidak menjadi lokasi uji coba wajib pada cakupan saat ini.
+* **Pihak yang perlu diajak membahas uji coba sistem (menurut peneliti):** ketua ISPF Surabaya dan Sidoarjo serta para senior. Persetujuan penggunaan sistem dan data supermatch belum diminta atau diperoleh.
 * **Latar Belakang Peneliti & Hubungan Antar-Chapter (*Insider Advantage*):**
   * Peneliti merupakan *puller* aktif yang berdomisili asal di Lamongan dan menempuh studi di Gresik.
   * Peneliti aktif mengikuti latihan rutin dan sparring di dua simpul komunitas: ISPF Lamongan (saat berada di domisili asal) dan ISPF Surabaya & Sidoarjo (saat berada di domisili studi Gresik).
@@ -34,7 +36,7 @@ Dokumen ini berfungsi sebagai buku catatan utama (*living document*) untuk merek
   * **Justifikasi Akademis Bab 1:** Membuktikan adanya fenomena **mobilitas atlet lintas wilayah**, di mana atlet membutuhkan sistem pemeringkatan (ELO Rating) terpusat yang adil dan dapat diakses dari mana saja saat bertanding di luar kota asalnya.
 * **Masalah Lapangan (Problem Statement):**
   1. Sparring merupakan latihan tanding rutin yang biasanya dilakukan dua kali seminggu dan perlu dibedakan dari supermatch. Hasil menang-kalah sparring tidak mencerminkan kekuatan atlet karena peserta dapat sedang mencoba atau mempelajari teknik.
-  2. Supermatch dipimpin oleh wasit, yaitu anggota ISPF yang pernah menjadi wasit resmi atau anggota senior yang memahami aturan. Pencatatan skor, riwayat tanding, foul, dan evaluasi performa masih manual/ingatan.
+  2. Supermatch dipimpin oleh wasit, yaitu anggota ISPF yang pernah menjadi wasit resmi atau anggota senior yang memahami aturan. Menurut peneliti, hasil supermatch selama ini tidak dicatat secara terstruktur dan umumnya hanya diingat anggota; pertandingan biasanya direkam dan videonya dikirim ke grup WhatsApp.
   3. Belum ada sistem klasemen (*leaderboard*) resmi berbasis data untuk mengukur performa atlet secara objektif per kelas tanding dan tangan (kiri/kanan).
 
 #### Pembedaan Sparring dan Supermatch (Klarifikasi Peneliti, 2026-11-16)
@@ -42,12 +44,19 @@ Dokumen ini berfungsi sebagai buku catatan utama (*living document*) untuk merek
 * **Sparring:** latihan tanding panco yang dilakukan rutin, sekitar dua kali seminggu; bukan latihan angkat beban. Pada sesi sparring, peserta bebas memilih lawan tanding.
 * **Tujuan sparring:** mempelajari teknik baru atau mencoba teknik yang telah dilatih dalam latihan mandiri. Karena tujuan dan intensitas tiap peserta dapat berbeda, kemenangan dalam sparring tidak otomatis berarti pemenangnya lebih kuat.
 * **Supermatch:** pertandingan yang dapat muncul karena seorang atlet menantang atlet lain untuk membuktikan kemampuan atau menguji batasnya; atlet juga dapat dipertemukan untuk menjalani supermatch. Supermatch memiliki wasit: anggota ISPF yang pernah menjadi wasit resmi atau anggota senior yang memahami aturan.
+* **Kelas berat menurut pengalaman peneliti sebagai anggota ISPF:** `-65 kg`, `-75 kg`, dan `+75 kg`. Supermatch lintas kelas dapat terjadi, misalnya ketika atlet kelas lebih ringan ingin menguji batas kemampuannya atau ada persoalan personal antaratlet. Batas tepat untuk berat 65 kg dan 75 kg perlu ditulis secara eksplisit dalam rancangan aturan.
 * **Waktu pelaksanaan bukan pembeda:** supermatch dapat berlangsung dalam sesi latihan rutin dua kali seminggu maupun dalam event khusus supermatch. Jadi, supermatch yang berlangsung saat sesi rutin tetap merupakan supermatch, bukan sparring.
 * **Aturan input sistem (keputusan peneliti):** hasil supermatch hanya dapat dimasukkan ke sistem jika pertandingan tersebut diwasiti oleh admin yang sudah terdaftar sebagai wasit di sistem. Tidak semua supermatch yang terjadi di lapangan otomatis dapat dicatat di sistem.
+* **Gagasan platform lintas komunitas (belum menjadi keputusan aturan):** setiap komunitas dapat memiliki admin atau wasit tepercaya untuk mengelola profil atlet dan mengajukan hasil supermatch. Keabsahan hasil perlu didukung bukti, misalnya video pertandingan, sebelum memengaruhi peringkat. Belum diputuskan apakah admin yang bukan wasit pertandingan boleh memasukkan hasil; ini perlu diselaraskan dengan aturan input sebelumnya.
+* **Batas perluasan sistem:** entitas chapter/komunitas dan relasinya dengan atlet, admin, wasit, serta pertandingan dapat dirancang untuk lebih dari dua chapter. Implementasi dan evaluasi skripsi tetap dibatasi pada ISPF Surabaya dan Sidoarjo; penerapan di chapter lain adalah peluang pengembangan setelah penelitian.
+* **Kondisi data lama (keterangan peneliti, belum diaudit):** belum ada rekap hasil supermatch yang terstruktur. Video pertandingan biasanya dikirim ke grup WhatsApp, tetapi video lama sulit dicari dan tidak selalu memperlihatkan hasil dengan jelas. Peneliti memperkirakan terjadi sekitar 30 pertandingan supermatch atau lebih per bulan di Surabaya dan Sidoarjo secara gabungan; angka ini menghitung pertandingan, bukan jumlah event, dan belum diverifikasi dengan inventaris.
 * **Implikasi rancangan sementara:** sistem perlu membedakan jenis aktivitas/pertandingan dari jadwal atau event tempat kegiatan berlangsung. Hasil sparring tidak digunakan sebagai dasar pemeringkatan Elo karena bukan ukuran kekuatan yang andal. Sumber hasil supermatch dalam sistem dibatasi oleh aturan wasit terdaftar di atas; tata cara pencatatan dan pengesahan hasil lainnya masih perlu dirinci bersama pengurus/wasit.
 
 ### 2.2 Keputusan Metode / Algoritma
 * **Metode Terpilih:** **Algoritma ELO Rating**
+* **Klasifikasi level awal atlet (keputusan peneliti, 2026-11-16):** berdasarkan jumlah gelar **juara 1 turnamen**, dihitung terpisah untuk tangan kanan dan tangan kiri. Pemula = 0 kali juara 1; semi-pro = 1–2 kali; pro = 3 kali atau lebih. Atlet dapat memiliki level awal berbeda pada kedua tangan. Gelar dihitung dari semua turnamen yang menetapkan juara 1, 2, dan 3; *fun match* dikecualikan. Posisi juara 2 dan 3 tidak menambah hitungan gelar untuk klasifikasi ini.
+* **Parameter yang belum ditetapkan:** cara memverifikasi riwayat juara 1 dan mengidentifikasi *fun match*, angka rating awal untuk tiap level, serta jarak antarrating. Klasifikasi level belum otomatis menetapkan angka Elo.
+* **Kebijakan Elo untuk supermatch lintas kelas belum diputuskan:** pertandingan lintas kelas dapat dicatat sebagai supermatch, tetapi perlu aturan tersendiri apakah hasilnya mengubah rating per kelas, masuk ke kelompok rating terbuka, atau hanya tercatat tanpa perubahan Elo. Jangan menyamakan dua kelompok rating kelas yang terpisah tanpa aturan penghubung yang jelas.
 * **Alasan Pemilihan ELO dibanding Metode Lain (misal SPK / Weighted Product):**
   * Panco (*arm wrestling*) adalah olahraga adu fisik satu lawan satu (*head-to-head zero-sum*). Penentu utama kehebatan *puller* adalah *siapa yang berhasil dikalahkan*, bukan sekadar akumulasi nilai kriteria statis.
   * *Weighted Product (WP)* rawan bias jika ada atlet yang memiliki winrate tinggi hanya karena melawan pemula.
@@ -95,8 +104,14 @@ Format pencatatan berkala untuk diskusi berikutnya:
 
 ### [2026-11-16] - Klarifikasi Aktivitas Lapangan dan Arah Judul
 
+* **Keputusan cakupan dan judul kerja:** pertahankan judul manajemen supermatch dan pemeringkatan Elo berbasis web dengan studi kasus ISPF Surabaya dan Sidoarjo. Struktur sistem disiapkan untuk kemungkinan chapter lain bergabung kelak, tetapi uji coba lintas banyak chapter tidak menjadi target skripsi saat ini. Sebutan “antar-komunitas” tidak dimasukkan ke judul kerja.
+* **Klarifikasi kelas berat dari peneliti:** kelas yang dipakai adalah `-65 kg`, `-75 kg`, dan `+75 kg`. Supermatch lintas kelas mungkin terjadi karena atlet kelas ringan ingin menguji batas atau karena persoalan personal. Ini adalah keterangan langsung peneliti sebagai anggota ISPF; kebijakan dampaknya pada Elo belum ditetapkan.
+* **Gagasan platform lintas komunitas dari peneliti:** tiap komunitas memiliki admin atau wasit tepercaya yang dapat mengelola profil atlet dan mengajukan hasil; bukti seperti video diperlukan untuk keabsahan. Rincian hak input, verifikasi bukti, dan pengesahan Elo belum ditetapkan.
+* **Klarifikasi level awal Elo:** "juara" berarti **juara 1 turnamen**, bukan seluruh posisi podium. Jumlah gelar dihitung terpisah menurut tangan: pemula 0, semi-pro 1–2, pro 3 atau lebih. Semua turnamen yang menetapkan juara 1, 2, dan 3 dapat menjadi sumber gelar, kecuali *fun match*; hanya posisi juara 1 yang dihitung. Cara pembuktian gelar dan angka rating awal masih terbuka.
 * **Klarifikasi dari peneliti:** sparring adalah latihan tanding panco, bukan latihan angkat beban, yang rutin dilakukan sekitar dua kali seminggu. Peserta bebas memilih lawan dan memakai sparring untuk mempelajari teknik baru atau mencoba teknik dari latihan mandiri. Hasil menang-kalah sparring tidak dapat langsung dipakai untuk menyimpulkan siapa lebih kuat. Supermatch dapat terjadi karena tantangan untuk membuktikan kemampuan atau menguji batas, atau karena atlet dipertemukan. Supermatch dapat diadakan pada sesi rutin maupun pada event khusus. Supermatch memiliki wasit, yaitu anggota ISPF yang pernah menjadi wasit resmi atau anggota senior yang memahami aturan.
 * **Aturan input sistem dari peneliti:** hanya hasil supermatch yang diwasiti oleh admin yang telah terdaftar sebagai wasit di sistem yang dapat dimasukkan ke sistem. Wasit supermatch di lapangan dan wasit yang memenuhi syarat input sistem tidak selalu sama.
+* **Klarifikasi ketersediaan data:** hasil supermatch lama tidak pernah dicatat dalam rekap terstruktur dan biasanya hanya diingat anggota. Pertandingan sering direkam lalu dikirim ke grup WhatsApp, tetapi video sulit ditelusuri dan hasilnya tidak selalu terlihat jelas. Perkiraan awal peneliti: sekitar 30 pertandingan supermatch atau lebih per bulan di Surabaya dan Sidoarjo secara gabungan. Jumlah pertandingan yang memenuhi aturan wasit sistem belum diketahui.
+* **Pihak untuk konfirmasi:** menurut peneliti, rencana uji coba pencatatan supermatch perlu dibahas dengan ketua ISPF Surabaya dan Sidoarjo serta para senior; pembicaraan dan persetujuannya belum dilakukan.
 * **Keputusan saat ini:** peneliti lebih condong ke Opsi 1, yaitu rancang bangun sistem informasi manajemen supermatch dan pemeringkatan atlet dengan Elo. Opsi 3 (matchmaking) bukan fokus utama judul saat ini; kebutuhan fitur mempertemukan lawan supermatch dapat dikaji kemudian berdasarkan temuan lapangan.
 * **Catatan untuk perancangan:** jangan menyamakan sparring dengan supermatch, jangan menggunakan jadwal rutin vs event khusus sebagai penentu jenis pertandingan, jangan memasukkan hasil sparring ke rating Elo, dan batasi input hasil supermatch menurut status admin sekaligus wasit terdaftar di sistem.
 
