@@ -31,7 +31,6 @@ Pengumpulan data baru direncanakan secara prospektif pada sesi rutin atau event 
 ## 5. Pertanyaan untuk Dosen Pembimbing
 
 1. Apakah masalah, judul kerja, dan cakupan uji Surabaya–Sidoarjo layak untuk skripsi S1? Perlukah nama ISPF dicantumkan di judul atau cukup dijelaskan sebagai sumber data dan tempat uji?
-2. Bagaimana batas minimum pengujian Elo yang diharapkan jika data historis belum terstruktur?
-3. Apakah usulan rating Openweight terpisah untuk laga lintas kelas layak diperdalam? Parameter dan syarat pertandingan apa yang perlu diprioritaskan dalam proposal?
+2. Apakah metode Elo Rating tepat untuk memeringkat atlet dari hasil akhir supermatch? Parameter awal dan pengujian Elo apa yang perlu saya prioritaskan dalam proposal?
 
 *Dokumen pendukung internal: [CATATAN_SKRIPSI.md](CATATAN_SKRIPSI.md) dan [CELAH_RENCANA_SKRIPSI.md](CELAH_RENCANA_SKRIPSI.md).*
