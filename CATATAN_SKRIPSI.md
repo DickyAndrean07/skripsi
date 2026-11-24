@@ -102,6 +102,28 @@ Berdasarkan `BUKU PANDUAN SKRIPSI 2025.pdf`:
 
 Format pencatatan berkala untuk diskusi berikutnya:
 
+### [2026-11-24] - Standarisasi Penamaan Kelas Berat, Penanganan Catchweight, dan Alur Wasit
+
+* **Penamaan Resmi Divisi Kelas Berat:**
+  * Disepakati konvensi penamaan divisi standar olahraga tarung (*combat sports*) untuk antarmuka web dan dokumen skripsi:
+    * `-65 kg` $\rightarrow$ **Lightweight** (Kelas Ringan)
+    * `-75 kg` $\rightarrow$ **Middleweight** (Kelas Menengah)
+    * `+75 kg` $\rightarrow$ **Heavyweight** (Kelas Berat)
+    * Lintas Divisi / Catchweight $\rightarrow$ **Openweight / Absolute** (Kelas Bebas / *Pound-for-Pound*)
+* **Rancangan Penanganan Duel Lintas Kelas (*Catchweight*):**
+  * Duel beda kelas (seperti kasus 84 kg vs 74 kg) dialokasikan untuk memperbarui **Leaderboard Openweight (Pound-for-Pound)**, sedangkan rating divisi kelas murni masing-masing atlet (`-65`, `-75`, `+75 kg`) tetap dilindungi agar tidak terdistorsi oleh perbedaan massa/berat badan.
+* **Perancangan Alur Wasit Meja Panco (*Mobile-First*):**
+  * Wasit login per akun chapter $\rightarrow$ Memilih dua atlet (sistem otomatis mendeteksi apakah duel satu divisi atau *catchweight*) $\rightarrow$ Memilih tangan (kanan/kiri) dan memasukkan skor ronde $\rightarrow$ Menampilkan *live preview* kalkulasi Elo untuk verifikasi visual $\rightarrow$ Memasukkan tautan bukti video $\rightarrow$ Menekan tombol *"Sahkan Pertandingan"* (eksekusi atomik, status terkunci `verified`, pembaruan mutasi rating instan).
+* **Standar Foto Profil Kartu Tanding (*Fight Card*):**
+  * Disepakati format foto atlet potret kepala-bahu (*Headshot / Bust Shot*) dengan rasio 1:1 atau 3:4, dilengkapi badge status tingkat keahlian (*Pro, Semi-Pro, Pemula*), serta fitur *auto-crop* dan siluet cadangan (*fallback avatar*) jika foto belum tersedia.
+
+### [2026-11-23] - Informasi Awal Ajakan Supermatch Gresik
+
+* **Sumber dan isi pesan:** peneliti menyampaikan pesan grup tentang orang-orang dari komunitas Gresik yang siap supermatch dengan ISPF Surabaya dan Sidoarjo pada bulan Januari. Pesan memuat 12 nama dalam daftar dan dua calon pasangan yang ditulis dengan `vs`. Tahun, tanggal pasti, tempat, dan afiliasi kedua lawan yang disebut setelah `vs` belum dikonfirmasi.
+* **Contoh kebutuhan rancangan:** berat yang tertulis pada dua calon pasangan ialah 84 kg vs 74 kg dan 72 kg vs 80 kg. Berdasarkan kelas kerja `-65`, `-75`, dan `+75 kg`, keduanya berpotensi menjadi pertandingan lintas kelas. Angka tersebut berasal dari pesan, belum merupakan hasil penimbangan atau bukti kesepakatan *catchweight*.
+* **Batas kesimpulan:** ajakan ini belum membuktikan bahwa pertandingan telah dijadwalkan secara pasti, terlaksana, memiliki wasit yang memenuhi aturan sistem, atau menghasilkan data untuk Elo. Daftar orang yang siap bertanding tidak dapat dihitung sebagai jumlah partai. Simpan pesan asli beserta tanggal kirimnya jika akan digunakan sebagai bukti pra-riset.
+* **Gagasan pengembangan, belum menjadi keputusan skripsi:** platform promotor independen dan pengelolaan admin/wasit per komunitas dapat dibahas kemudian. Gagasan ini tidak otomatis menghapus kebutuhan izin penggunaan data, tidak mengubah aturan saat ini bahwa hasil yang dicatat harus diwasiti admin terdaftar sebagai wasit di sistem, dan tidak memperluas studi kasus yang masih berfokus pada ISPF Surabaya–Sidoarjo. Kewenangan lintas komunitas serta kebijakan Elo lintas kelas tetap terbuka; lihat [CELAH_RENCANA_SKRIPSI.md](CELAH_RENCANA_SKRIPSI.md).
+
 ### [2026-11-16] - Klarifikasi Aktivitas Lapangan dan Arah Judul
 
 * **Keputusan cakupan dan judul kerja:** pertahankan judul manajemen supermatch dan pemeringkatan Elo berbasis web dengan studi kasus ISPF Surabaya dan Sidoarjo. Struktur sistem disiapkan untuk kemungkinan chapter lain bergabung kelak, tetapi uji coba lintas banyak chapter tidak menjadi target skripsi saat ini. Sebutan “antar-komunitas” tidak dimasukkan ke judul kerja.
