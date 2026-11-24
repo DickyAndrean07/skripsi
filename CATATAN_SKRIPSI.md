@@ -104,16 +104,17 @@ Format pencatatan berkala untuk diskusi berikutnya:
 
 ### [2026-11-24] - Standarisasi Penamaan Kelas Berat, Penanganan Catchweight, dan Alur Wasit
 
-* **Penamaan Resmi Divisi Kelas Berat:**
-  * Disepakati konvensi penamaan divisi standar olahraga tarung (*combat sports*) untuk antarmuka web dan dokumen skripsi:
+* **Penamaan Divisi untuk Rancangan Web:**
+  * Peneliti mengusulkan label berikut untuk antarmuka web dan dokumen skripsi; batas kilogramnya mengikuti kelas yang dipakai dalam studi kasus, bukan standar universal olahraga tarung:
     * `-65 kg` $\rightarrow$ **Lightweight** (Kelas Ringan)
     * `-75 kg` $\rightarrow$ **Middleweight** (Kelas Menengah)
     * `+75 kg` $\rightarrow$ **Heavyweight** (Kelas Berat)
-    * Lintas Divisi / Catchweight $\rightarrow$ **Openweight / Absolute** (Kelas Bebas / *Pound-for-Pound*)
-* **Rancangan Penanganan Duel Lintas Kelas (*Catchweight*):**
-  * Duel beda kelas (seperti kasus 84 kg vs 74 kg) dialokasikan untuk memperbarui **Leaderboard Openweight (Pound-for-Pound)**, sedangkan rating divisi kelas murni masing-masing atlet (`-65`, `-75`, `+75 kg`) tetap dilindungi agar tidak terdistorsi oleh perbedaan massa/berat badan.
+    * Lintas kelas $\rightarrow$ **Openweight** (Kelas Bebas). Istilah *catchweight* dipakai hanya bila batas berat khusus telah disepakati; Openweight bukan sinonim *pound-for-pound*.
+* **Rancangan Penanganan Duel Lintas Kelas:**
+  * Laga beda kelas (misalnya calon pasangan 84 kg vs 74 kg) diusulkan masuk kategori Openweight dan mengubah rating Openweight jika hasilnya memenuhi syarat; rating divisi kelas berat masing-masing atlet (`-65`, `-75`, `+75 kg`) tidak berubah.
+  * **Keputusan peneliti tentang rating awal Openweight (24 November 2026):** setiap atlet memulai dari **1000 Elo Openweight untuk tangan kanan dan 1000 Elo Openweight untuk tangan kiri**, tanpa membedakan kelas berat atau level pemula/semi-pro/pro. Rating Openweight tiap atlet kemudian berubah mengikuti hasil akhir supermatch Openweight yang sah dan rating lawannya; tidak ada tambahan poin otomatis berdasarkan selisih berat badan. Rating Openweight terpisah dari rating divisi kelas berat. Anggapan bahwa peserta Openweight sudah kuat adalah pandangan peneliti, belum bukti untuk menyimpulkan bahwa kekuatan awal semua peserta setara. Nilai *K-factor*, syarat laga yang masuk Openweight, dan syarat tampil di leaderboard masih perlu ditetapkan.
 * **Perancangan Alur Wasit Meja Panco (*Mobile-First*):**
-  * Wasit login per akun chapter $\rightarrow$ Memilih dua atlet (sistem otomatis mendeteksi apakah duel satu divisi atau *catchweight*) $\rightarrow$ Memilih tangan (kanan/kiri) dan memasukkan skor ronde $\rightarrow$ Menampilkan *live preview* kalkulasi Elo untuk verifikasi visual $\rightarrow$ Memasukkan tautan bukti video $\rightarrow$ Menekan tombol *"Sahkan Pertandingan"* (eksekusi atomik, status terkunci `verified`, pembaruan mutasi rating instan).
+  * Wasit login per akun chapter $\rightarrow$ Memilih dua atlet (sistem menandai bila kelas beratnya berbeda; kategori Openweight dikonfirmasi oleh wasit) $\rightarrow$ Memilih tangan (kanan/kiri) dan memasukkan skor ronde $\rightarrow$ Menampilkan *live preview* kalkulasi Elo untuk verifikasi visual $\rightarrow$ Memasukkan tautan bukti video $\rightarrow$ Menekan tombol *"Sahkan Pertandingan"* (eksekusi atomik, status terkunci `verified`, pembaruan mutasi rating instan).
 * **Standar Foto Profil Kartu Tanding (*Fight Card*):**
   * Disepakati format foto atlet potret kepala-bahu (*Headshot / Bust Shot*) dengan rasio 1:1 atau 3:4, dilengkapi badge status tingkat keahlian (*Pro, Semi-Pro, Pemula*), serta fitur *auto-crop* dan siluet cadangan (*fallback avatar*) jika foto belum tersedia.
 
