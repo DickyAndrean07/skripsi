@@ -102,6 +102,31 @@ Berdasarkan `BUKU PANDUAN SKRIPSI 2025.pdf`:
 
 Format pencatatan berkala untuk diskusi berikutnya:
 
+### [2026-11-26] - Masukan Bimbingan Awal dan Rencana Dua Opsi untuk Pertemuan Berikutnya
+
+* **Masukan Bimbingan Awal dari Dosen (Pak Farid):**
+  * Menilai rancangan metode masih sederhana dan mengkhawatirkan pertanyaan penguji.
+  * Mengarahkan agar metode mempertimbangkan beberapa variabel relevan (mencontohkan tinggi badan dan kekuatan lengan yang mungkin memengaruhi nilai $K$), menanyakan apakah metode memiliki *rules*, serta menyinggung kombinasi metode seperti **Fuzzy**, **Algoritma Genetika**, dan **AI**.
+* **Rencana Tindak Lanjut (Dua Opsi untuk Bimbingan Berikutnya):**
+  * Menurut peneliti, penjelasan mekanisme dan tujuan penggunaan Elo pada pertemuan awal belum tersampaikan secara utuh. Oleh karena itu, mahasiswa akan **memperjelas mekanisme serta rencana pengujian Elo dasar**, sekaligus membawa **alternatif kombinasi *Fuzzy–Elo Sugeno*** untuk penyesuaian nilai $K$.
+  * **Keputusan terpenting yang masih terbuka:** menentukan tujuan utama pemakaian Fuzzy—apakah untuk mempercepat penyesuaian rating yang belum pasti, memberi bobot pada dominasi skor, atau mengompensasi perbedaan berat—karena ketiganya memiliki alasan dan konsekuensi berbeda yang perlu dijelaskan satu per satu kepada Pak Farid.
+* **Evaluasi Kandidat Masukan & Celah Metode *Fuzzy–Elo* (Belum Final):**
+  * **Tiga kandidat masukan untuk nilai $K$:**
+    1. **Jumlah supermatch sah sebelumnya** (pada tangan dan kelompok rating terkait; *sparring* dikecualikan): paling mudah dijelaskan sebagai ukuran seberapa banyak informasi historis yang membentuk rating saat ini.
+    2. **Selisih berat badan:** kandidat konteks laga (baik lintas kelas maupun di dalam satu kelas); perlu alasan jelas mengapa lebih ringan/berat menaikkan atau menurunkan $K$, dan tidak otomatis menjamin ketepatan prediksi rating.
+    3. **Margin skor ronde:** memberi informasi tambahan mengenai dominasi hasil, tetapi mengubah kebijakan awal (di mana skor 3–0 dan 3–2 memberi poin sama). Jika memakai rasio persentase, perbedaan skala antara BO5 (`3–2 = 33,3%`) dan BO7 (`4–3 = 25%`) harus dijelaskan maknanya. Jika margin skor digunakan, skor itu dipakai **setelah laga selesai untuk memperbarui rating**; penilaian prediksi laga tersebut harus memakai informasi yang tersedia sebelum pertandingan.
+  * **Variabel & metode lain yang masih perlu dikaji:**
+    * *Jeda waktu antar-laga* ditunda hingga sebaran frekuensi tanding per atlet terlihat (karena atlet tetap berlatih/*sparring* meski jarang menjalani supermatch).
+    * Relevansi *tinggi badan* serta prosedur pengukuran *kekuatan lengan* belum ditolak mutlak, melainkan masih perlu dikaji kelayakan pengukurannya di lapangan.
+    * *Machine Learning / AI* belum dipilih karena data historis saat ini belum terstruktur, sedangkan *Algoritma Genetika* dicatat berpotensi untuk optimasi parameter/aturan Fuzzy (*FIS tuning*), bukan hanya penjadwalan.
+  * **Celah matematis & syarat pengujian yang harus ditetapkan:**
+    * Menentukan apakah Fuzzy menghasilkan **satu nilai $K$ yang sama per pertandingan** atau **$K$ berbeda untuk tiap atlet**. $K$ berbeda per atlet memungkinkan jumlah kenaikan dan penurunan poin tidak seimbang; dampaknya terhadap kenaikan atau penurunan total rating perlu dianalisis dan diuji.
+    * Menentukan sudut pandang aturan (misalnya "kalah berat" atau "jumlah laga" mengacu ke pemenang, penantang, atau masing-masing atlet), fungsi keanggotaan, batas kategori, serta keluaran numerik tiap aturan Sugeno.
+    * Rentang $K=16\text{–}48$ merupakan kandidat rancangan peneliti dan belum memiliki dasar khusus untuk panco; jumlah kombinasi (misalnya $3 \times 3 \times 2 = 18$ aturan) juga belum ditetapkan.
+    * Kriteria pembandingan ditetapkan sebelum pengujian. Ketepatan hitung membuktikan implementasi rumus; klaim peningkatan kualitas pemeringkatan atau prediksi memerlukan evaluasi tambahan. Elo dasar dan *Fuzzy–Elo* dibandingkan menggunakan data serta urutan pertandingan yang sama. Penilaian wasit membantu menyusun aturan awal, sedangkan pengujian dengan data diperlukan untuk menilai manfaatnya.
+* **Catatan Batas Toleransi Berat Badan:**
+  * Gagasan batas toleransi *overweight* hingga `3 kg` dengan opsi kesepakatan sebelum laga dicatat sebagai **usulan awal yang perlu dikonfirmasi**, bukan aturan sistem final (karena memberi pengecualian terhadap batas kelas $\le 65\text{ kg}$).
+
 ### [2026-11-24] - Standarisasi Penamaan Kelas Berat, Penanganan Catchweight, dan Alur Wasit
 
 * **Penamaan Divisi untuk Rancangan Web:**
